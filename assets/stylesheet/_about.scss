@@ -1,0 +1,52 @@
+//about-hero-sec
+
+.about-hero-sec {
+  min-height: 100vh;
+  background: linear-gradient(to left, rgba(black, 0.5), rgba(black, 0.6)),
+    url(../media/about.jpg) no-repeat;
+  background-size: cover;
+  transition: all 1s linear;
+  &:hover h2 {
+    animation-name: about-head;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  & > div {
+    height: 100%;
+  }
+  h2 {
+    color: wheat;
+    font-size: 3rem;
+  }
+}
+
+@keyframes about-head {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(30px, 30px);
+  }
+  50% {
+    transform: translate(-30px, 30px);
+  }
+  75% {
+    transform: translate(-30px, -30px);
+  }
+  100% {
+    transform: translate(30px, -30px);
+  }
+}
+
+//quotes-sec
+
+.quotes-sec {
+  p {
+    font-size: 1.2rem;
+  }
+  i {
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+}

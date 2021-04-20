@@ -1,0 +1,72 @@
+// Pricing-hero-sec
+
+.Pricing-hero-sec {
+  min-height: 100vh;
+  background: linear-gradient(to left, rgba(black, 0.5), rgba(black, 0.6)),
+    url(../media/pricing.jpg) no-repeat;
+  background-size: cover;
+  transition: all 1s linear;
+  &:hover h2 {
+    animation-name: about-head;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  & > div {
+    height: 100%;
+  }
+  h2 {
+    color: wheat;
+    font-size: 3rem;
+  }
+}
+
+.pricing-card {
+  background-color: $card-body;
+  padding: 2rem;
+  border: 1px solid rgba(128, 128, 128, 0.527);
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px gray;
+  position: relative;
+  overflow: hidden;
+  & > * {
+    margin-bottom: 2rem;
+  }
+  span {
+    &::before {
+      content: "$";
+      font-size: 3rem;
+    }
+    &::after {
+      content: ".00";
+    }
+  }
+  li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    &::before {
+      content: "-";
+    }
+  }
+  .pricing-card-gray {
+    color: gray;
+    text-decoration: line-through;
+  }
+  .best {
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+
+    background-color: $ter;
+    padding: 0.5rem 3rem;
+    top: 30px;
+    right: -45px;
+    transform: rotate(45deg);
+  }
+  transition: all 2s ease-in-out;
+  transition-delay: 1s;
+  &:hover {
+    transform: scale(1.3);
+    z-index: 24;
+  }
+}
